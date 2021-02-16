@@ -1,11 +1,14 @@
 <div class="container d-flex justify-content-center align-items-center">
     <div class='card p-5'>
-        <h6>Task list</h6>
+        <h4>Task list</h4>
         <% @tasks.each do |task| %>
         <div class="field">
             <%= check_box_tag(task.completed) %>
-            <%= label_tag(task.title) %>
+            <label for="title"><%= link_to task[:title],
+            task_path(task) %></label>
         </div>
         <% end %>
+    <hr>
+    <%= link_to "create new task", new_task_path, class: "btn btn-dark" %>
     </div>
 </div>

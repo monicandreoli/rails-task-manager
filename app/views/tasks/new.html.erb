@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="card p-3">
+    <h4>Create a new task</h4>
+        <%= form_for(@task) do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+        <%= f.label :details %>
+        <%= f.text_field :details, class: "form-control" %>
+        <%= f.submit :class => 'btn btn-dark w-100 mt-3' %>
+        <% end %>
+    </div>
+</div>

@@ -1,10 +1,6 @@
+# frozen_string_literal: true
+
 class Task < ApplicationRecord
-    def change
-        create_table :restaurants do |t|
-          t.string :title
-          t.string :details
-          t.boolean :completed, default: false
-          t.timestamps
-        end
-    end
+  validates :title, presence: true
+  validates :details, presence: true
 end
